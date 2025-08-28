@@ -40,11 +40,11 @@ jobs:
         run: |
           npm ci
           npx playwright install  
-          npx playwright test --headless --workers=1 
+          npx playwright test --workers=1 
 
       # 4️⃣  Run the Playwright test suite
       - name: Run Playwright tests
-        run: npx playwright test --headless --workers=1  --reporter=html     # Generates /playwright-report
+        run: npx playwright test --workers=1  --reporter=html     # Generates /playwright-report
 
       # 5️⃣  Upload the HTML report even if tests fail
       - name: Upload Playwright report
