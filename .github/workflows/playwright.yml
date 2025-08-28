@@ -1,27 +1,54 @@
-name: Playwright Tests
+name: Playwright CI            # Label shown in Actions UI & README badge
+
+# ────────────────
+# Triggers
+# ────────────────
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  push:                        # Run only when commits land on main
+    branches: [main]
+
+  # pull_request:              # 🔒 Disabled to avoid duplicate runs.
+  #   branches: [main]         #   → Uncomment if you want pre‑merge checks.
+
+# ────────────────
+# Jobs
+# ────────────────
 jobs:
-  test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
+  test:                        # Single job for the entire suite
+    runs-on: ubuntu-latest     # Fresh Linux VM each time
+
+    # Environment variables (secrets are masked as *** in logs)
+    # env:
+    #  TEST_USER: ${{ secrets.TEST_USER }}
+    #  TEST_PASS: ${{ secrets.TEST_PASS }}
+    #  BASE_URL:  ${{ secrets.BASE_URL }}
+
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      # 1️⃣  Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2️⃣  Set up Node.js (with npm cache)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # 3️⃣  Install dependencies + Playwright browsers
+      - name: Install deps & browsers
+        run: |
+          npm ci
+          npx playwright test --headed --workers=1 
+
+      # 4️⃣  Run the Playwright test suite
+      - name: Run Playwright tests
+        run: npx playwright test --workers=1  --reporter=html     # Generates /playwright-report
+
+      # 5️⃣  Upload the HTML report even if tests fail
+      - name: Upload Playwright report
+        if: always()                                 # Always run, even if tests fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report

@@ -2,7 +2,10 @@
   "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"npx playwright test --headed --workers=1 ",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuyliyaK/Playwright.git"
@@ -18,6 +21,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.0"
+    "@types/node": "^24.3.0",
+    "allure-playwright": "^3.3.3"
   }
 }
