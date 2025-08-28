@@ -39,6 +39,7 @@ jobs:
       - name: Install deps & browsers
         run: |
           npm ci
+          npx playwright install  
           npx playwright test --headed --workers=1 
 
       # 4️⃣  Run the Playwright test suite
