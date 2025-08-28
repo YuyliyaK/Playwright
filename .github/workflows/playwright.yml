@@ -39,17 +39,18 @@ jobs:
       - name: Install deps & browsers
         run: |
           npm ci
-          npx playwright install  
+          npx playwright install 
+          npm i -D @playwright/test allure-playwright  
           npx playwright test --workers=1 
 
       # 4️⃣  Run the Playwright test suite
       - name: Run Playwright tests
-        run: npx playwright test --workers=1  --reporter=html     # Generates /playwright-report
+        run: npx playwright test --workers=1  --reporter=allure-playwright     # Generates /playwright-report
 
       # 5️⃣  Upload the HTML report even if tests fail
       - name: Upload Playwright report
         if: always()                                 # Always run, even if tests fail
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
-          path: playwright-report
+          name: allure-playwright
+          path: allure-playwright
