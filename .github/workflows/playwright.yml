@@ -45,12 +45,12 @@ jobs:
 
       # 4️⃣  Run the Playwright test suite
       - name: Run Playwright tests
-        run: npx playwright test --workers=1  --reporter=allure-playwright     # Generates /playwright-report
-
+        run: npx playwright test --workers=1  --reporter=allure-report     # Generates /playwright-report
+        run: npm report
       # 5️⃣  Upload the HTML report even if tests fail
       - name: Upload Playwright report
         if: always()                                 # Always run, even if tests fail
         uses: actions/upload-artifact@v4
         with:
-          name: allure-playwright
-          path: allure-playwright
+          name: allure-report
+          path: allure-report
