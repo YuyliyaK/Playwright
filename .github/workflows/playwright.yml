@@ -43,37 +43,16 @@ jobs:
           npx playwright test --workers=1 
 
       # 4️⃣  Run the Playwright test suite
-      #- name: Run Playwright tests
-      #  run: npx playwright test --workers=1  --reporter=html     # Generates /playwright-report
-      - uses: actions/upload-artifact@master
-        with:
-          name: allure-results
-          path: allure-results
-          retention-days: 20
+      - name: Run Playwright tests
+        run: npx playwright test --workers=1  --reporter=html     # Generates /playwright-report
 
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
+      # 5️⃣  Upload the HTML report even if tests fail
+      - name: Upload Playwright report
+        if: always()   
+        continue-on-error: true                              # Always run, even if tests fail
+        uses: actions/upload-artifact@v4
         with:
-          ref: gh-pages
-          path: gh-pages
+          name: playwright-report
+          path: playwright-report
 
-      - name: Test marketplace action
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        id: allure-report
-        with:
-          allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-          keep_reports: 20
-
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history 
+          
