@@ -1,3 +1,7 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2415","has title","Google Chrome","Sat Aug 30 14:26:18 MSK 2025","passed","Sat Aug 30 14:26:21 MSK 2025","","","",""
 "","6507","get started link","chromium","Fri Aug 29 22:15:06 MSK 2025","failed","Fri Aug 29 22:15:13 MSK 2025","","","",""
+"","5405","get started link","firefox","Sat Aug 30 14:26:35 MSK 2025","failed","Sat Aug 30 14:26:40 MSK 2025","","","",""
+"","8243","has title","firefox","Sat Aug 30 14:26:24 MSK 2025","passed","Sat Aug 30 14:26:32 MSK 2025","","","",""
+"","6603","get started link","Google Chrome","Sat Aug 30 14:26:18 MSK 2025","failed","Sat Aug 30 14:26:25 MSK 2025","","","",""
 "","1959","has title","chromium","Fri Aug 29 22:15:02 MSK 2025","passed","Fri Aug 29 22:15:04 MSK 2025","","","",""
