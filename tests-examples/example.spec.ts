@@ -1,5 +1,14 @@
 import { test, expect } from '@playwright/test';
 
+
+test.only('Open Page', async ({page}) => {
+  await page.goto('https://enotes.pointschool.ru/')
+  await expect(page).toHaveTitle(/OK-Notes - Магазин блокнотов/);
+  await page.getByRole('link', { name: 'Вход' }).click();
+  //page.waitForTimeout(3000)
+
+});
+
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
