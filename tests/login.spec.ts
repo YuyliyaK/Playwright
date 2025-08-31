@@ -12,6 +12,6 @@ test.describe('Login flow', () => {
 
     test('should login with valid credentials', async () => {
         await mp.loginPage.openLoginPage()
-        
+        await mp.loginPage.fillLoginPage()
     });
 })

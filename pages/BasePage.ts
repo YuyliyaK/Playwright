@@ -1,4 +1,4 @@
-import { Page, expect } from "@playwright/test";
+import { Page, expect, Locator } from "@playwright/test";
 
 export abstract class BasePage {
     constructor(protected readonly page: Page){}
@@ -13,5 +13,22 @@ export abstract class BasePage {
 
     async checkURL(title: string){
         await expect(this.page).toHaveURL(title)
+    }
+    protected async basePageClick(selector: string | Locator) {
+        await this.toLocator(selector).click();
+    }
+
+    protected async basePageFill(selector: string | Locator, value: string) {
+        await this.toLocator(selector).fill(value);
+    }
+
+    protected async basePageExpectVisible(selector: string | Locator) {
+        await expect(this.toLocator(selector)).toBeVisible();
+    }
+    
+    protected toLocator(selector: string | Locator): Locator {
+        return typeof selector === 'string'
+        ? this.page.locator(selector)   
+        : selector;                     
     }
 }

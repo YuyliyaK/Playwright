@@ -1,10 +1,13 @@
 import { BasePage } from "./BasePage";
 import { expect } from "@playwright/test";
 import type { Locator } from "@playwright/test";
+import { Input } from "./elements/Input";
+
 
 export class LoginPage extends BasePage{
     constructor(page){
-        super(page)
+        super(page);
+    
     }
     async openLoginPage(){
         let randomNumber: number = Math.ceil(Math.random()*2)
@@ -17,5 +20,10 @@ export class LoginPage extends BasePage{
 
         await this.checkURL('/login')
 
+    }
+
+    async fillLoginPage(loginValue = 'test'){
+        await this.basePageClick('#loginform-username')
+        await this.basePageFill('#loginform-username',loginValue)
     }
 }
