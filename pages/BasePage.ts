@@ -11,6 +11,7 @@ export abstract class BasePage {
         await expect(this.page).toHaveTitle(title);
     }
 
+    
     async checkURL(title: string){
         await expect(this.page).toHaveURL(title)
     }
@@ -25,7 +26,7 @@ export abstract class BasePage {
     protected async basePageExpectVisible(selector: string | Locator) {
         await expect(this.toLocator(selector)).toBeVisible();
     }
-    
+
     protected toLocator(selector: string | Locator): Locator {
         return typeof selector === 'string'
         ? this.page.locator(selector)   

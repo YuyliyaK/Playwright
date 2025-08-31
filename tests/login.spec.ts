@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import ManagePage from '../pages/ManagePage';
 
 
-test.describe('Login flow', () => {
+test.describe('Авторизация пользователя', () => {
     let mp: ManagePage;
 
     // Before each test, create a new ManagePage (and thus new page objects)
@@ -10,7 +10,7 @@ test.describe('Login flow', () => {
         mp = new ManagePage(page);
     });
 
-    test('should login with valid credentials', async () => {
+    test('Проверка успешной авторизации пользователя', async () => {
         await mp.loginPage.openLoginPage()
         await mp.loginPage.fillLoginPage()
     });

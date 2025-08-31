@@ -1,8 +1,6 @@
 import { BasePage } from "./BasePage";
-import { expect } from "@playwright/test";
-import type { Locator } from "@playwright/test";
-import { Input } from "./elements/Input";
-
+import { expect, Locator } from "@playwright/test";
+import { validCredential } from "../test-data/parameters";
 
 export class LoginPage extends BasePage{
     constructor(page){
@@ -22,8 +20,14 @@ export class LoginPage extends BasePage{
 
     }
 
-    async fillLoginPage(loginValue = 'test'){
+    async fillLoginPage(loginValue: string = validCredential.username,passValue:string = validCredential.password){
         await this.basePageClick('#loginform-username')
         await this.basePageFill('#loginform-username',loginValue)
+        await this.basePageClick('//input[@type="password"]')
+        await this.basePageFill('//input[@type="password"]',passValue)
+    }
+
+    async rememberUser(){
+
     }
 }
