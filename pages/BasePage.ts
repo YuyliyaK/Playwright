@@ -22,6 +22,15 @@ export abstract class BasePage {
     protected async basePageFill(selector: string | Locator, value: string) {
         await this.toLocator(selector).fill(value);
     }
+    protected async basePageType(selector: string | Locator, value: string) {
+        await this.toLocator(selector).type(value);
+    }
+    protected async check_checkBox(selector: string | Locator){
+        await this.toLocator(selector).check();
+    }
+    protected async click_checkBox(selector: string | Locator){
+        await this.toLocator(selector).click();
+    }
 
     protected async basePageExpectVisible(selector: string | Locator) {
         await expect(this.toLocator(selector)).toBeVisible();
