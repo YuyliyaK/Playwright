@@ -1,0 +1,101 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "OK-Notes" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - generic [ref=e11] [cursor=pointer]: test
+        - listitem [ref=e12]:
+          - generic [ref=e13] [cursor=pointer]: Корзина
+          - generic [ref=e14]: "6"
+          - text:     
+  - generic [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e21]:
+          - textbox "Поиск по названию" [ref=e22]
+          - button "" [ref=e24] [cursor=pointer]:
+            - generic [ref=e25] [cursor=pointer]: 
+        - generic [ref=e26]:
+          - listbox [ref=e27]:
+            - option [ref=e28]: Скетчбуки
+            - option [ref=e29]: Тетради
+            - option [ref=e30]: Блокноты на спирали
+            - option [ref=e31]: Записные книжки
+            - option [ref=e32]: Нотные тетради
+            - option [ref=e33]: Альбомы для кулинарных рецептов
+            - option [ref=e34]: Датированные ежедневники
+            - option [ref=e35]: Недатированные ежедневники
+            - option [ref=e36]: Еженедельники
+            - option [ref=e37]: Планинги
+            - option [ref=e38]: Аксессуары
+          - combobox [ref=e41]:
+            - list [ref=e42]:
+              - listitem [ref=e43]:
+                - textbox "Тип" [ref=e44]
+        - generic [ref=e45]:
+          - listbox [ref=e46]
+          - combobox [ref=e49]:
+            - list [ref=e50]:
+              - listitem [ref=e51]:
+                - textbox "Бренд" [ref=e52]
+        - generic [ref=e54]:
+          - generic [ref=e56]: Цена
+          - textbox "From" [ref=e57]
+          - textbox "To" [ref=e58]
+          - button "" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61] [cursor=pointer]: 
+      - generic [ref=e65]:
+        - checkbox "Показать только со скидкой" [checked] [ref=e66]
+        - generic [ref=e67]: Показать только со скидкой
+    - generic [ref=e68]: Товары не найдены
+    - navigation "Page navigation" [ref=e69]:
+      - list [ref=e70]:
+        - listitem [ref=e71] [cursor=pointer]:
+          - generic [ref=e72] [cursor=pointer]: "1"
+        - listitem [ref=e73] [cursor=pointer]:
+          - generic [ref=e74] [cursor=pointer]: "2"
+        - listitem [ref=e75] [cursor=pointer]:
+          - generic [ref=e76] [cursor=pointer]: "3"
+    - generic [ref=e77]:
+      - generic [ref=e78]: Обращение в службу поддержки
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: Имя
+          - textbox "Имя" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]: Email
+          - textbox "Email" [ref=e85]
+        - generic [ref=e86]:
+          - generic [ref=e87]: Описание
+          - textbox "Описание" [ref=e88]
+        - button "Отправить" [disabled] [ref=e89] [cursor=pointer]
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - strong [ref=e92]: Уведомление
+        - button "Close" [ref=e93] [cursor=pointer]:
+          - generic [ref=e94] [cursor=pointer]: ×
+      - generic [ref=e95]: Корзина пуста. Добавьте несколько блокнотов.
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - strong [ref=e98]: Уведомление
+        - button "Close" [ref=e99] [cursor=pointer]:
+          - generic [ref=e100] [cursor=pointer]: ×
+      - generic [ref=e101]: Сообщение успешно отправлено.
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - strong [ref=e104]: Уведомление
+        - button "Close" [ref=e105] [cursor=pointer]:
+          - generic [ref=e106] [cursor=pointer]: ×
+      - generic [ref=e107]: Некорректно указано количество покупаемого товара.
+  - generic [ref=e108]:
+    - generic [ref=e109]:
+      - strong [ref=e110]: Уведомление
+      - button "Close" [ref=e111] [cursor=pointer]:
+        - generic [ref=e112] [cursor=pointer]: ×
+    - generic [ref=e113]: Email не должен содержать русских символов.
+```

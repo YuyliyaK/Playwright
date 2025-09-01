@@ -11,6 +11,7 @@ import 'dotenv/config';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -39,9 +40,12 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
+    video: 'on',
+    screenshot: 'on',
+    headless : false,
   },
-
+  //timeout: 10000,
   /* Configure projects for major browsers */
   projects: [
     // {
@@ -53,10 +57,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
     
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
     // {
     //   name: 'webkit',

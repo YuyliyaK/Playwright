@@ -8,6 +8,7 @@ export class MiniCartPage extends BasePage{
     protected openCartPage: string
     protected productName: string
     protected productPrice: string
+    protected countAddedProduct: string
     
 
     constructor(page){
@@ -18,6 +19,7 @@ export class MiniCartPage extends BasePage{
         this.openCartPage = 'a:has-text("Перейти в корзину")';
         this.productName = "//span[@class='basket-item-title']";
         this. productPrice = "//span[@class='basket-item-price']";
+        this.countAddedProduct = "//span[contains(@class,'basket-count-items')]"
     }
     async openMiniCart(){
         await this.basePageClick(this.miniCart)
@@ -68,5 +70,22 @@ export class MiniCartPage extends BasePage{
        let actualPrice: string = Number(productQuantity) * Number(price) + ''
        await expect(this.page.locator(this.productPrice)).toContainText(actualPrice)
     }
+    async getAddedProductName_oneProduct(){
+        await this.openMiniCart()
+        let nameAddedProduct: string = await this.page.locator(this.productName).innerText()
+        await this.openMiniCart()
+        return nameAddedProduct
+    }
     
+    async checkAddedProductCount(productCount: number,title: string){
+        await expect(this.page.locator(`//span[text()='${title}']/../span[contains(@class,'count')]`)).toHaveText(''+productCount)
+    }
+    async getAllAddedProductCount(){
+        let allAddedProductCount : string = await this.page.locator(this.countAddedProduct).innerText()
+        return allAddedProductCount
+    }
+    async verifyProductCount(productQuantity:number){
+        await expect(this.page.locator(this.countAddedProduct)).toHaveText(''+productQuantity)
+
+    }
 }

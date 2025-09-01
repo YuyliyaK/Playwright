@@ -28,6 +28,10 @@ export abstract class BasePage {
     protected async check_checkBox(selector: string | Locator){
         await this.toLocator(selector).check();
     }
+    protected async uncheck_checkBox(selector: string | Locator){
+        await this.toLocator(selector).uncheck();
+    }
+
     protected async click_checkBox(selector: string | Locator){
         await this.toLocator(selector).click();
     }

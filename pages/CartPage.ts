@@ -8,6 +8,7 @@ export class CartPage extends BasePage{
     }
 
     async checkOpenPage(){
+        await expect(this.page).toHaveURL('/basket')
         await expect(this.page.locator('#dropdownUser')).toContainText(validCredential.username)
         await this.basePageExpectVisible('#dropdownBasket')
         await expect(this.page.locator('.h3')).toHaveText('Корзина пользователя')
