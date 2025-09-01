@@ -1,0 +1,232 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "OK-Notes" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - generic [ref=e11] [cursor=pointer]: test
+        - listitem [ref=e12]:
+          - generic [ref=e13] [cursor=pointer]: Корзина
+          - generic [ref=e14]: "1"
+          - text: 
+  - generic [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e21]:
+          - textbox "Поиск по названию" [ref=e22]
+          - button "" [ref=e24] [cursor=pointer]:
+            - generic [ref=e25] [cursor=pointer]: 
+        - generic [ref=e26]:
+          - listbox [ref=e27]:
+            - option [ref=e28]: Скетчбуки
+            - option [ref=e29]: Тетради
+            - option [ref=e30]: Блокноты на спирали
+            - option [ref=e31]: Записные книжки
+            - option [ref=e32]: Нотные тетради
+            - option [ref=e33]: Альбомы для кулинарных рецептов
+            - option [ref=e34]: Датированные ежедневники
+            - option [ref=e35]: Недатированные ежедневники
+            - option [ref=e36]: Еженедельники
+            - option [ref=e37]: Планинги
+            - option [ref=e38]: Аксессуары
+          - combobox [ref=e41]:
+            - list [ref=e42]:
+              - listitem [ref=e43]:
+                - textbox "Тип" [ref=e44]
+        - generic [ref=e45]:
+          - listbox [ref=e46]
+          - combobox [ref=e49]:
+            - list [ref=e50]:
+              - listitem [ref=e51]:
+                - textbox "Бренд" [ref=e52]
+        - generic [ref=e54]:
+          - generic [ref=e56]: Цена
+          - textbox "From" [ref=e57]
+          - textbox "To" [ref=e58]
+          - button "" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61] [cursor=pointer]: 
+      - generic [ref=e65]:
+        - checkbox "Показать только со скидкой" [ref=e66]
+        - generic [ref=e67]: Показать только со скидкой
+    - generic [ref=e68]:
+      - generic [ref=e70]:
+        - generic [ref=e71] [cursor=pointer]:
+          - generic [ref=e73] [cursor=pointer]:
+            - text: "-"
+            - generic [ref=e74] [cursor=pointer]: "300"
+            - text: р.
+          - img "..." [ref=e75] [cursor=pointer]
+        - generic [ref=e76]:
+          - generic [ref=e77]: Записные книжки
+          - generic [ref=e78]: Творческий беспорядок
+          - generic [ref=e79]:
+            - text: "Цена:"
+            - generic [ref=e80]:
+              - text: 400 р.
+              - generic [ref=e81]: 700 р.
+          - generic [ref=e82]:
+            - textbox [ref=e83]: "1"
+            - generic [ref=e85]:
+              - text: "Склад:"
+              - generic [ref=e86]: "20"
+          - button "Купить" [ref=e87] [cursor=pointer]
+      - generic [ref=e89]:
+        - img "..." [ref=e91] [cursor=pointer]
+        - generic [ref=e92]:
+          - generic [ref=e93]: Записные книжки
+          - generic [ref=e94]: Блокнот в точку
+          - generic [ref=e95]:
+            - text: "Цена:"
+            - generic [ref=e96]: 400 р.
+          - generic [ref=e97]:
+            - textbox [ref=e98]: "1"
+            - generic [ref=e100]:
+              - text: "Склад:"
+              - generic [ref=e101]: "35"
+          - button "Купить" [ref=e102] [cursor=pointer]
+      - generic [ref=e104]:
+        - generic [ref=e105] [cursor=pointer]:
+          - generic [ref=e107] [cursor=pointer]:
+            - text: "-"
+            - generic [ref=e108] [cursor=pointer]: "100"
+            - text: р.
+          - img "..." [ref=e109] [cursor=pointer]
+        - generic [ref=e110]:
+          - generic [ref=e111]: Еженедельники
+          - generic [ref=e112]: Игра престолов
+          - generic [ref=e113]:
+            - text: "Цена:"
+            - generic [ref=e114]:
+              - text: 285 р.
+              - generic [ref=e115]: 385 р.
+          - generic [ref=e116]:
+            - textbox [ref=e117]: "1"
+            - generic [ref=e119]:
+              - text: "Склад:"
+              - generic [ref=e120]: "4"
+          - button "Купить" [ref=e121] [cursor=pointer]
+      - generic [ref=e123]:
+        - img "..." [ref=e125] [cursor=pointer]
+        - generic [ref=e126]:
+          - generic [ref=e127]: Блокноты на спирали
+          - generic [ref=e128]: Кошечка Мари
+          - generic [ref=e129]:
+            - text: "Цена:"
+            - generic [ref=e130]: 442 р.
+          - generic [ref=e131]:
+            - textbox [ref=e132]: "1"
+            - generic [ref=e134]:
+              - text: "Склад:"
+              - generic [ref=e135]: "19"
+          - button "Купить" [ref=e136] [cursor=pointer]
+      - generic [ref=e138]:
+        - img "..." [ref=e140] [cursor=pointer]
+        - generic [ref=e141]:
+          - generic [ref=e142]: Нотные тетради
+          - generic [ref=e143]: Нотная тетрадь
+          - generic [ref=e144]:
+            - text: "Цена:"
+            - generic [ref=e145]: 499 р.
+          - generic [ref=e146]:
+            - textbox [ref=e147]: "1"
+            - generic [ref=e149]:
+              - text: "Склад:"
+              - generic [ref=e150]: "2"
+          - button "Купить" [ref=e151] [cursor=pointer]
+      - generic [ref=e153]:
+        - generic [ref=e154] [cursor=pointer]:
+          - generic [ref=e156] [cursor=pointer]:
+            - text: "-"
+            - generic [ref=e157] [cursor=pointer]: "50"
+            - text: р.
+          - img "..." [ref=e158] [cursor=pointer]
+        - generic [ref=e159]:
+          - generic [ref=e160]: Недатированные ежедневники
+          - generic [ref=e161]: Black&Red
+          - generic [ref=e162]:
+            - text: "Цена:"
+            - generic [ref=e163]:
+              - text: 315 р.
+              - generic [ref=e164]: 365 р.
+          - generic [ref=e165]:
+            - textbox [ref=e166]: "1"
+            - generic [ref=e168]:
+              - text: "Склад:"
+              - generic [ref=e169]: "21"
+          - button "Купить" [ref=e170] [cursor=pointer]
+      - generic [ref=e172]:
+        - img "..." [ref=e174] [cursor=pointer]
+        - generic [ref=e175]:
+          - generic [ref=e176]: Еженедельники
+          - generic [ref=e177]: Гусь. Дедлайн
+          - generic [ref=e178]:
+            - text: "Цена:"
+            - generic [ref=e179]: 750 р.
+          - generic [ref=e180]:
+            - textbox [ref=e181]: "1"
+            - generic [ref=e183]:
+              - text: "Склад:"
+              - generic [ref=e184]: "12"
+          - button "Купить" [ref=e185] [cursor=pointer]
+      - generic [ref=e187]:
+        - img "..." [ref=e189] [cursor=pointer]
+        - generic [ref=e190]:
+          - generic [ref=e191]: Тетради
+          - generic [ref=e192]: Художник
+          - generic [ref=e193]:
+            - text: "Цена:"
+            - generic [ref=e194]: 420 р.
+          - generic [ref=e195]:
+            - textbox [ref=e196]: "1"
+            - generic [ref=e198]:
+              - text: "Склад:"
+              - generic [ref=e199]: "15"
+          - button "Купить" [ref=e200] [cursor=pointer]
+    - navigation "Page navigation" [ref=e201]:
+      - list [ref=e202]:
+        - listitem [ref=e203] [cursor=pointer]:
+          - generic [ref=e204] [cursor=pointer]: "1"
+        - listitem [ref=e205] [cursor=pointer]:
+          - generic [ref=e206] [cursor=pointer]: "2"
+    - generic [ref=e207]:
+      - generic [ref=e208]: Обращение в службу поддержки
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: Имя
+          - textbox "Имя" [ref=e212]
+        - generic [ref=e213]:
+          - generic [ref=e214]: Email
+          - textbox "Email" [ref=e215]
+        - generic [ref=e216]:
+          - generic [ref=e217]: Описание
+          - textbox "Описание" [ref=e218]
+        - button "Отправить" [disabled] [ref=e219] [cursor=pointer]
+    - generic [ref=e220]:
+      - generic [ref=e221]:
+        - strong [ref=e222]: Уведомление
+        - button "Close" [ref=e223] [cursor=pointer]:
+          - generic [ref=e224] [cursor=pointer]: ×
+      - generic [ref=e225]: Корзина пуста. Добавьте несколько блокнотов.
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - strong [ref=e228]: Уведомление
+        - button "Close" [ref=e229] [cursor=pointer]:
+          - generic [ref=e230] [cursor=pointer]: ×
+      - generic [ref=e231]: Сообщение успешно отправлено.
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - strong [ref=e234]: Уведомление
+        - button "Close" [ref=e235] [cursor=pointer]:
+          - generic [ref=e236] [cursor=pointer]: ×
+      - generic [ref=e237]: Некорректно указано количество покупаемого товара.
+  - generic [ref=e238]:
+    - generic [ref=e239]:
+      - strong [ref=e240]: Уведомление
+      - button "Close" [ref=e241] [cursor=pointer]:
+        - generic [ref=e242] [cursor=pointer]: ×
+    - generic [ref=e243]: Email не должен содержать русских символов.
+```

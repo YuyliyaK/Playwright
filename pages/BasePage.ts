@@ -33,7 +33,7 @@ export abstract class BasePage {
     }
 
     protected async basePageExpectVisible(selector: string | Locator) {
-        await expect(this.toLocator(selector)).toBeVisible();
+        await expect.soft(this.toLocator(selector)).toBeVisible();
     }
 
     protected toLocator(selector: string | Locator): Locator {
