@@ -18,7 +18,7 @@ test.describe('Проверка открытия страницы корзины
         // await mp.miniCartPage.checkOpenningMiniCart()
         // await mp.miniCartPage.openUserCartPage()
         await mp.cartPage.checkOpenPage()
-    });
+    }); 
 
     test('Тест-кейс 2. Переход в корзину с 1 неакционным товаром', async () => {
         await mp.productPage.addSimpleProduct()

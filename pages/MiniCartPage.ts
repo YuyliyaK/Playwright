@@ -63,7 +63,7 @@ export class MiniCartPage extends BasePage{
     async openUserCartPage(){
         await this.basePageClick(this.openCartPage)
     }
-
+ 
     async checkProductInfo_oneProduct(title: string, price: string){
        await expect(this.page.locator(this.productName)).toHaveText(title)
        let productQuantity: string = await this.page.locator(`//span[text()='${title}']/../span[contains(@class,'count')]`).innerText()

@@ -135,7 +135,7 @@ export class ProoductPage extends BasePage{
         if (randomNumber == 2){
             await this.typeProductQuantity(randomProductNumber,productQuantity)
             await this.addProduct(this.withDiscount,randomProductNumber)
-        } else {
+        } else { 
             for (let i = 0; i < productQuantity; i++){
                 await this.addProduct(this.withDiscount,randomProductNumber)
             }
