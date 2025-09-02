@@ -15,8 +15,8 @@ test.describe('Проверка открытия страницы корзины
 
     test('Тест-кейс 1. Переход в пустую корзину', async () => {
         await mp.miniCartPage.openMiniCart()
-        // await mp.miniCartPage.checkOpenningMiniCart()
-        // await mp.miniCartPage.openUserCartPage()
+        await mp.miniCartPage.checkOpenningMiniCart()
+        await mp.miniCartPage.openUserCartPage()
         await mp.cartPage.checkOpenPage()
     }); 
 

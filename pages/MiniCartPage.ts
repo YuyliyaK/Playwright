@@ -45,11 +45,11 @@ export class MiniCartPage extends BasePage{
 
     async cleanCart(){
         let randomNumber: number = Math.ceil(Math.random()*2)
-        //console.log(randomNumber)
+        console.log(randomNumber)
         if (randomNumber == 1){
            await this.cleanCartByAddingProduct()
         } else {
-            this.checkQuantityProduct()
+           await this.checkQuantityProduct()
         }
 
     }
